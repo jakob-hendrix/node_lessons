@@ -17,9 +17,13 @@ var writeGreeting = function(name) {
 };
 
 
+var args = process.argv;
+
+write("The arguments to this run are: " + args);
 writeGreeting("Carlos");
 write(answer);
 write(typeof answer);
 write(type);
 write(typeof z);
 write(test + " is a value of type " + typeof test);
+write(typeof console.log);
