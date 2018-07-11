@@ -43,3 +43,10 @@ Pluralsite Node.js practice
 ### Commands
 
 * typeof - return the type of some value
+
+
+## Useful Functions
+
+* Math.random()
+
+
