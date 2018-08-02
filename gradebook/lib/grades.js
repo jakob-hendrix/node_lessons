@@ -5,25 +5,51 @@ var gradeBook = {
         this._grades.push(newGrade);
     },
 
+
     reset: function(){
         this._grades = [];
     },
+
 
     getCountOfGrades: function(){
         return this._grades.length;
     },
 
-    getAverage: function(){
+
+    getSumOfGrades: function(){
         var sumOfGrades = 0;
-
-        if (this._grades.length == 0) {
-            return 0;
-        }
-
         for (var i = 0; i < this._grades.length; i++){
             sumOfGrades += this._grades[i];
         }
-        return sumOfGrades / this._grades.length;
+        return sumOfGrades
+    },
+
+
+    getAverage: function(){
+        if (this._grades.length == 0) {
+            return 0;
+        }
+        return this.getSumOfGrades() / this._grades.length;
+    },
+
+    getLetterGrade: function(){
+        var gradeAverage = this.getAverage();
+
+        if (gradeAverage >= 90) {
+            return 'A';
+        } 
+        else if (gradeAverage >= 80) {
+            return 'B'
+        }
+        else if (gradeAverage >=70) {
+            return 'C'
+        } 
+        else if (gradeAverage >= 60) {
+            return 'D'
+        } 
+        else {
+            return 'F'
+        };
     }
 };
 
